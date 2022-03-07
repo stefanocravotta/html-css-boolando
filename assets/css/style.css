@@ -14,27 +14,179 @@ section{
   width: 80%;
   height: 600px;
   margin: 30px auto;
-  background-color: red;
 }
 
 .img-size{
+  position: relative;
   height: 90%;
-  background-color: blue;
+  background-size: cover;
 }
+
+.heart{
+  position: absolute;
+  right: 0;
+  top: 15px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 35px;
+  background-color: white;
+}
+
+
+.heart::after{
+  content: "\02665";
+  font-size: 1.2rem;
+}
+
+
+
+.box{
+  height: 22px;
+  color: white;
+  text-align: center;
+  line-height: 22px;
+  font-size: .7rem;
+  font-weight: bolder;
+  padding: 0 5px;
+  margin-right: 4px;
+  margin-top: 500px;
+
+}
+
+.sconto{
+  float: left;
+  background-color: rgb(198, 0, 0);
+}
+
+.sconto::before{
+  content: "-";
+}
+
+.sconto::after{
+  content: "\0025";
+}
+
+.sostenibile{
+  float: left;
+  background-color: rgb(0, 120, 73);
+
+}
+
+.sostenibile::after{
+  content: "\00E0";
+}
+
+.marchio{
+  color: rgb(135, 121, 131);
+  font-size: .8rem;
+}
+
+.modello{
+  text-transform: uppercase;
+  font-size: .9rem;
+  margin-top: 5px;
+}
+
+.prezzo{
+  color: red;
+  font-size: .8rem;
+}
+
+.prezzo::after{
+  content: " \20AC ";
+}
+
+.sbarrato{
+  color: rgb(135, 121, 131);
+  font-size: .8rem;
+  text-decoration: line-through;
+}
+
+
+
+
 
 /* MAIN */
 
 .product{
-  /* è proprio brutto */
-  width: 32.5%;  
-  /* /è proprio brutto */
+  width: 31%;  
   height: 100%;
   float: left;
-  border: 1px solid black;
-}
-
-.product.product-center{
   margin: 0 1%;
+  
 }
 
 
+.description{
+  margin-top: 10px;
+}
+
+.product .img-size{
+  cursor: pointer;
+}
+
+/* BLOCCO 1 */
+
+.top .product .product-left{
+  background-image: url(../img/1.webp);
+}
+
+
+.top .product .product-center{
+  background-image: url(../img/2.webp);
+}
+
+
+.top .product .product-right{
+  background-image: url(../img/3.webp);
+}
+
+/* hover */
+
+.top .product-left.img-size:hover{
+  background-image: url(../img/1b.webp);
+}
+
+.top .product-center.img-size:hover{
+  background-image: url(../img/2b.webp);
+}
+
+.top .product-right.img-size:hover{
+  background-image: url(../img/3b.webp);
+}
+
+/* BLOCCO 2 */
+
+
+.bottom .product .product-left{
+  background-image: url(../img/4.webp);
+}
+
+.bottom .product .product-center{
+  background-image: url(../img/5.webp);
+}
+
+.bottom .product .product-right{
+  background-image: url(../img/6.webp);
+}
+
+/* hover */
+
+
+.bottom .product-left.img-size:hover{
+  background-image: url(../img/4b.webp);
+}
+
+.bottom .product-center.img-size:hover{
+  background-image: url(../img/5b.webp);
+}
+
+.bottom .product-right.img-size:hover{
+  background-image: url(../img/6b.webp);
+}
+ 
+
+.product .img-size:hover .heart{
+  color: red;
+}
