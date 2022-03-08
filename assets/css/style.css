@@ -10,54 +10,81 @@
 /* UTLITY */
 
 section{
-  position: relative;
   width: 80%;
-  height: 600px;
   margin: 30px auto;
 }
 
-.img-size{
-  position: relative;
-  height: 90%;
-  background-size: cover;
+.product{
+  width: calc(100% / 3);
+  display: inline-block;
+  padding: 5px;
 }
 
-.heart{
+
+.img-size{
+  position: relative;
+}
+
+.img-size img{
+  width: 100%;
+}
+
+
+.img-size .heart{
   position: absolute;
   right: 0;
   top: 15px;
-  height: 35px;
-  width: 35px;
-  text-align: center;
-  line-height: 35px;
+  padding: 10px 15px;
   background-color: white;
 }
 
+
+.card-promo{
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
 
 .heart::after{
   content: "\02665";
   font-size: 1.2rem;
 }
 
-
-
-.box{
-  height: 22px;
-  color: white;
-  text-align: center;
-  line-height: 22px;
-  font-size: .7rem;
-  font-weight: bolder;
-  padding: 0 5px;
-  margin-right: 4px;
-  margin-top: 500px;
-
+.card-promo span{
+color: white;
+padding: 5px;
+font-weight: bold;
 }
 
-.sconto{
-  float: left;
-  background-color: rgb(198, 0, 0);
+.card-promo .sconto{
+  background-color: red;
 }
+
+.card-promo .sostenibile{
+  background-color: green;
+}
+
+.second-image{
+  display: none;
+}
+
+.img-size:hover .first-image{
+  display: none;
+}
+
+.img-size:hover .second-image{
+  display: inline-block;
+}
+
+
+.description span{
+  font-size: 14px;
+}
+
+.description h3{
+  text-transform: uppercase;
+}
+
 
 .sconto::before{
   content: "-";
@@ -65,12 +92,6 @@ section{
 
 .sconto::after{
   content: "\0025";
-}
-
-.sostenibile{
-  float: left;
-  background-color: rgb(0, 120, 73);
-
 }
 
 .sostenibile::after{
@@ -82,11 +103,6 @@ section{
   font-size: .8rem;
 }
 
-.modello{
-  text-transform: uppercase;
-  font-size: .9rem;
-  margin-top: 5px;
-}
 
 .prezzo{
   color: red;
@@ -110,11 +126,6 @@ section{
 /* MAIN */
 
 .product{
-  width: 31%;  
-  height: 100%;
-  float: left;
-  margin: 0 1%;
-  
 }
 
 
@@ -128,63 +139,6 @@ section{
 
 /* BLOCCO 1 */
 
-.top .product .product-left{
-  background-image: url(../img/1.webp);
-}
-
-
-.top .product .product-center{
-  background-image: url(../img/2.webp);
-}
-
-
-.top .product .product-right{
-  background-image: url(../img/3.webp);
-}
-
-/* hover */
-
-.top .product-left.img-size:hover{
-  background-image: url(../img/1b.webp);
-}
-
-.top .product-center.img-size:hover{
-  background-image: url(../img/2b.webp);
-}
-
-.top .product-right.img-size:hover{
-  background-image: url(../img/3b.webp);
-}
-
-/* BLOCCO 2 */
-
-
-.bottom .product .product-left{
-  background-image: url(../img/4.webp);
-}
-
-.bottom .product .product-center{
-  background-image: url(../img/5.webp);
-}
-
-.bottom .product .product-right{
-  background-image: url(../img/6.webp);
-}
-
-/* hover */
-
-
-.bottom .product-left.img-size:hover{
-  background-image: url(../img/4b.webp);
-}
-
-.bottom .product-center.img-size:hover{
-  background-image: url(../img/5b.webp);
-}
-
-.bottom .product-right.img-size:hover{
-  background-image: url(../img/6b.webp);
-}
  
 
 .product .img-size:hover .heart{
